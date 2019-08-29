@@ -7,10 +7,9 @@
   <title>ROS Web Studio</title>
   <link rel="Shortcut Icon" href="/static/favicon.ico" type="image/ico">
 
-  <link rel="stylesheet" type="text/css"
-    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
 
   <script src="https://static.robotwebtools.org/threejs/current/three.js"></script>
   <script src="http://static.robotwebtools.org/threejs/current/ColladaLoader.js"></script>
@@ -73,6 +72,15 @@
         path: 'http://localhost:8080/static/models/',
         rootObject: viewer.scene,
         loader: ROS3D.COLLADA_LOADER
+      });
+
+      // Setup Laserscan
+      var laserScan = new ROS3D.LaserScan({
+        ros: ros,
+        topic: '/scan',
+        tfClient: tfClient,
+        rootObject: viewer.scene,
+        size: 0.01
       });
 
       // Initialize the teleop.
