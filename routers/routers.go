@@ -3,8 +3,8 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/nomango/ros_web/controllers"
-	"github.com/nomango/ros_web/modules/templates"
+	"github.com/nomango/ROSWeb-MyTeleop/controllers"
+	"github.com/nomango/ROSWeb-MyTeleop/modules/templates"
 )
 
 func Setup(engine *gin.Engine) {

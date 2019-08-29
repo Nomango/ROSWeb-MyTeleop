@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/sirupsen/logrus"
 	"net/http"
 
-	"github.com/nomango/ros_web/modules/settings"
-	"github.com/nomango/ros_web/routers"
+	"github.com/sirupsen/logrus"
+
+	"github.com/nomango/ROSWeb-MyTeleop/modules/settings"
+	"github.com/nomango/ROSWeb-MyTeleop/routers"
 
 	"github.com/gin-gonic/gin"
 )
