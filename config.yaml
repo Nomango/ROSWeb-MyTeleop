@@ -1,0 +1,8 @@
+# Copyright (C) 2019 Nomango
+
+---
+
+app:
+  name: KiwanoEngine
+  port: 8080
+  debug: true
